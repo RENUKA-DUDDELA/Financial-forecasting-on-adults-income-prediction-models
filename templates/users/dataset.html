@@ -1,0 +1,13 @@
+{% extends "users/userbase.html" %}
+
+{% block content %}
+<!-- <h1>Welcome to our dataset</h1> -->
+<div>
+    <p><h3 align="center" style="color:white; font-weight:bold;">View Dataset</h3></p>
+      <pre>
+           {{data|safe}}
+      </pre>
+</div>
+{% endblock %}
+
+

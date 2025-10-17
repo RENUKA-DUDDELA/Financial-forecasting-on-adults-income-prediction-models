@@ -1,0 +1,21 @@
+{% extends 'admins/adminbase.html' %}
+{% block content %}
+
+<center>
+    <h2>Edit User</h2>
+    <form class="dani" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" value="{{ user['name'] }}"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" value="{{ user['email'] }}"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" value="{{ user['password'] }}"><br><br>
+        <label for="status">Status:</label><br>
+        <select id="status" name="status">
+            <option value="waiting" {% if user['status'] == 'waiting' %}selected{% endif %}>Waiting</option>
+            <option value="activated" {% if user['status'] == 'activated' %}selected{% endif %}>Activated</option>
+        </select><br><br>
+        <input type="submit" value="Update">
+    </form>
+</center>
+{% endblock %}

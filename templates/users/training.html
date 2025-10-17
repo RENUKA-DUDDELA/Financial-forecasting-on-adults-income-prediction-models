@@ -1,0 +1,14 @@
+{% extends 'users/userbase.html' %}
+{% block content %}
+
+<table border="2px" align="center">
+    <tr>
+     <tr><td>Random_Forest_Classifier_Algo_accuracy:</td><td>{{accuracy_score|safe}}</td></tr>
+      <!-- <tr><td>error:</td><td>{{confusion_matrix|safe}}</td></tr> -->
+       
+
+    </tr>
+
+  </table>
+
+{% endblock %}

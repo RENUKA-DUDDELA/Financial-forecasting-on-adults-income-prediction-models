@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<center>
+<h1>User Login </h1>
+<form class="dani" method="POST" action="{{ url_for('userlogin') }}">
+    
+
+    <div style="margin-bottom: 15px;">
+        <label for="loginid">loginid:</label>
+        <input type="text" name="loginid" id="loginid" required style="width: 100%; padding: 8px;" placeholder="Enter User LoginId"/>
+    </div>
+
+    <div style="margin-bottom: 15px;">    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required style="width: 100%; padding: 8px;" placeholder="Enter User Password"/>
+    </div>
+    <div>
+        <button type="submit">Login</button>
+    </div>
+    {% if error %}
+        <div style="color:red;">
+            <strong>{{ error }}</strong>
+        </div>
+    {% endif %}
+</form>
+</center>
+{% endblock %}
+
+
+
+

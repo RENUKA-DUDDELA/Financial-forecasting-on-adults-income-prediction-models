@@ -1,0 +1,46 @@
+{% extends 'admins/adminbase.html' %}
+{% block content %}
+<center>
+    <table border="1px">
+        <h1>ALL REGISTER USERS</h1>
+        <thead>
+            <td><strong>Name</strong></td>
+            <td><strong>Loginid</strong></td>
+            <td><strong>Email</strong></td>
+            <td><strong>Password</strong></td>
+            <td><strong>branch</strong></td>
+            <td><strong>Collage Name</strong></td>
+            <td><strong>Phone</strong></td>
+            <td><strong>Locality</strong></td>
+            <td><strong>State</strong></td>           
+            <td><strong>Eadit</strong></td>
+            <td><strong>Status</strong></td>
+            <td><strong>Activate</strong></td>
+        </thead>          
+        {% for row in rows %}
+            <tr>
+                <td>{{ row["name"] }}</td>
+                <td>{{ row["loginid"] }}</td>
+                <td>{{ row["email"] }}</td>
+                <td>{{ row["password"] }}</td>
+                <td>{{ row["branch"] }}</td>
+                <td>{{ row["collagename"] }}</td>
+                <td>{{ row["phone"] }}</td>
+                <td>{{ row["locality"] }}</td>
+                <td>{{ row["state"] }}</td>         
+
+                <td><a class="btn-link" href="{{ url_for('edit_user', uid=row['rowid']) }}" style="color:BLUE">Edit</a></td>
+                <td>{{ row["status"] }}</td>
+                {% if row["status"] == 'waiting' %}
+               <td><a class="btn-link" href="{{ url_for('delete_user', uid=row['rowid']) }}" style="color:RED">Delete</a>/
+                <a class="btn-link" href="{{ url_for('activate_user', uid=row['rowid']) }}" style="color:DARKBLUE">Activate</a></td>
+                {% else %}
+                <td>Activated</td> 
+                {% endif %}
+               
+                   
+            </tr>
+        {% endfor %}
+    </table>
+</center>
+{% endblock %}

@@ -1,0 +1,132 @@
+{% extends 'users/userbase.html' %}
+{% block content %}
+<style>
+    .dani{
+        width: 300px;
+        margin: 1px;
+        border:10px;        
+        padding: 20px; /* Add padding */
+        background-color:green; /* Add background color */      
+    }
+</style>
+<!-- <h1>Welcome to prognostication</h1> -->
+<center>
+<!-- <h2>Submit Data</h2> -->
+<!-- <h1 style="color:red">{{msg}}</h1> -->
+   <!-- <form action="/predication" method="post"> -->
+   <!-- <div>
+    <label for="age">age:</label>
+    <input type="number" id="age" name="age"  required>
+   </div><br>  -->
+    
+   <!-- <div>
+    <label for="workclass">workclass:</label>
+    <input type="number" id="workclass" name="workclass" required>
+  </div><br>  -->
+
+  <!-- <div>
+    <label for="fnlwgt">fnlwgt:</label>
+    <input type="number" id="fnlwgt" name="fnlwgt" required>
+  </div><br> -->
+
+  <!-- <div>
+    <label>education:</label>
+    <input type="number" id="education" name="education" required>
+  </div><br> -->
+  <!-- <div>    
+  
+  
+  -->
+
+  <h1 style="color:red">ADULTS INCOME PREDICTION IS = {{msg}}</h1>
+
+  <form class="dani" action="/predication"  method="post">
+   <!-- <form action="/predication" method="post"> -->
+    <div style="margin-bottom: 15px;">
+      <label for="age">age:</label>
+      <input type="number" id="age" name="age"  required style="width: 100%; padding: 8px;" placeholder="Enter Your age">
+    </div>
+
+
+    <div style="margin-bottom: 15px;">
+        <label for="workclass">workclass:</label>
+        <input type="number" id="workclass" name="workclass" required style="width: 100%; padding: 8px;" placeholder="Enter Your workclass"/>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label for="fnlwgt">fnlwgt:</label>
+      <input type="number" id="fnlwgt" name="fnlwgt" required style="width: 100%; padding: 8px;" placeholder="Enter Your fnlwgt"/>
+    </div>   
+
+
+    <div style="margin-bottom: 15px;">
+      <label>education:</label>
+      <input type="number" id="education" name="education" required style="width: 100%; padding: 8px;" placeholder="Enter Your education"/>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+         <label for="education_num">education_num:</label>
+         <input type="number" id="education_num" name="education_num" required style="width: 100%; padding: 8px;"  placeholder="Enter Your education_num"/>
+    </div>
+
+
+    <div style="margin-bottom: 15px;">
+        <label for="marital_status">marital_status:</label>
+        <input type="number" id="marital_status" name="marital_status" required style="width: 100%; padding: 8px;" placeholder="Type Your marital_status"/>
+    </div>   
+
+    <div style="margin-bottom: 15px;">
+         <label for="occupation">occupation:</label>
+        <input type="number" id="occupation" name="occupation" required style="width: 100%; padding: 8px;" placeholder="Enter Your Occupation"/>   
+    </div> 
+    
+    <div style="margin-bottom: 15px;">
+       <label for="relationship">relationship:</label>
+        <input type="number" id="	relationship" name="relationship" required style="width: 100%; padding: 8px;" placeholder="Enter Your Relationship"/>  
+    </div>  
+
+
+     <div style="margin-bottom: 15px;">
+       <label for="race">race:</label>
+      <input type="number" id="race" name="race" required style="width: 100%; padding: 8px;" placeholder="Enter Your Race"/>   
+    </div>  
+
+
+     <div style="margin-bottom: 15px;">
+      <label for="sex">sex:</label>
+       <input type="number" id="sex" name="sex" required style="width: 100%; padding: 8px;" placeholder="Enter Your Sex"/>  
+    </div>  
+
+
+
+
+     <div style="margin-bottom: 15px;">
+       <label for="capital_gain">capital_gain:</label>
+       <input type="number" id="capital_gain" name="capital_gain" required style="width: 100%; padding: 8px;" placeholder="Enter Your capital_gain"/>   
+    </div>  
+
+
+    <div style="margin-bottom: 15px;">
+      <label for="capital_loss">capital_loss:</label>
+     <input type="number" id="capital_loss" name="capital_loss" required style="width: 100%; padding: 8px;" placeholder="Enter Your Capital_loss"/>   
+    </div>  
+
+
+     <div style="margin-bottom: 15px;">
+      <label for="hours_per_week">hours_per_week:</label>
+     <input type="number" id="hours_per_week" name="hours_per_week" required style="width: 100%; padding: 8px;" placeholder="Enter Your hours_per_week"/>   
+    </div>  
+
+     <div style="margin-bottom: 15px;">
+       <label for="native_country">native_country:</label>
+       <input type="number" id="native_country" name="native_country" required style="width: 100%; padding: 8px;" placeholder="Enter Your Native_country"/>   
+ 
+    </div>    
+
+
+    <button type="submit">submit</button>  
+   
+</form>
+ </center>
+
+  {% endblock %}

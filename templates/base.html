@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="topnav">
+        <a class="active" href="/">HOME</a>
+        <a href="{{ url_for('userlogin') }}">USERLOGIN</a>
+        <a href="{{ url_for('adminlogin') }}">ADMINLOGIN</a>
+        <a href="{{ url_for('register') }}">USERREGISTERFORM</a>
+    </div>
+  <!-- <img src="{{ url_for('static', filename='imges/download.jpg') }}" width="90%" height="10%"> -->
+    
+<main>
+  {% block content %}
+  
+  {% endblock %}
+  
+</main>
+<hr>
+
+
+<!-- footer start -->
+
+    <footer>
+        <p>&copy; 2025 NavyaItSolutions. All rights reserved.</p>
+    </footer>
+<!-- endfooter -->
+</body>
+</html>

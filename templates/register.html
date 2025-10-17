@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block content %}
+<center>
+<h1>USERREGISTATIONFORM</h1>
+{{msg}}
+<form class="dani" method="post">
+    <div style="margin-bottom: 15px;">
+        <label for="name">name:</label>
+        <input type="text" name="name" id="name" required style="width: 100%; padding: 8px;" placeholder="Enter Your Name"/>
+    </div>
+
+
+    <div style="margin-bottom: 15px;">
+        <label for="loginid">loginid:</label>
+        <input type="text" name="loginid" id="loginid" required style="width: 100%; padding: 8px;" placeholder="Enter Your LoginId"/>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required style="width: 100%; padding: 8px;" placeholder="Enter Your Email"/>
+    </div>   
+
+
+    <div style="margin-bottom: 15px;">
+        <label for="password">Password:</label>
+        <div style="position: relative;">
+            <input type="password" name="password" id="password" required minlength="8" maxlength="20"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" style="width: 100%; padding: 8px; padding-right: 30px;" placeholder="Enter Your Password"/>
+            <span style="position: absolute; right: 10px; top: 8px; cursor: pointer;" onclick="togglePassword()">
+                <i id="eyeIcon" class="fa fa-eye"></i>
+            </span>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label for="branch">branch:</label>
+        <input type="text" name="branch" id="branch" required style="width: 100%; padding: 8px;" placeholder="Enter Your branch"/>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label for="collagename">collagename:</label>
+        <input type="text" name="collagename" id="collagename" required style="width: 100%; padding: 8px;"  placeholder="Enter Your Collage Name"/>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="phone">phone number:</label>
+        <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" required  style="width: 100%; padding: 8px;" placeholder="10-digit phone number"/>
+    </div>      
+    <div style="margin-bottom: 15px;">
+        <label for="locality">Locality:</label>
+        <input type="text" name="locality" id="locality"  required  style="width: 100%; padding: 8px;" placeholder="Enter Your Locality"/>
+    </div> 
+    
+    <div style="margin-bottom: 15px;">
+        <label for="state">State:</label>
+        <input type="text" name="state" id="state"  required  style="width: 100%; padding: 8px;" placeholder="Enter Your State"/>
+    </div>    
+    <button type="submit">submit</button>  
+   
+</form>
+
+
+<script>
+    function togglePassword() {
+        const passwordField = document.getElementById('password');
+        const eyeIcon = document.getElementById('eyeIcon');
+        
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+            eyeIcon.classList.remove('fa-eye');
+            eyeIcon.classList.add('fa-eye-slash');
+        } else {
+            passwordField.type = 'password';
+            eyeIcon.classList.remove('fa-eye-slash');
+            eyeIcon.classList.add('fa-eye');
+        }
+    }
+</script>
+
+<!-- Add Font Awesome for the eye icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</center>
+{% endblock %}
